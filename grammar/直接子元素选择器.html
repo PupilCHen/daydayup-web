@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 
+			.parent>.child>.sunzi tab键快速的嵌套div元素
+		 -->
+		<style type="text/css">
+			/* .parent div{
+				 width: 100px;
+				 height: 100px;
+				 background-color: #FA8072;
+			 } */
+			
+			/* 使用此种方式，孙子元素就不会继承父父元素的样式 */
+			.parent>div {
+				width: 100px;
+				height: 100px;
+				background-color: #FA8072;
+			}
+		</style>
+		<div class="parent">
+			<div class="child">
+				<div class="sunzi"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 通过边框的调整 调整为三角形 */
+			#d1{
+				/* width: 100px; */
+				width: 0px;
+				/* height: 100px; */
+				height: 0px;
+				/* 背景颜色取消设置 */
+				/* background: salmon; */
+				/* border: 20px solid aqua; */
+				
+				/* border-top: 20px solid #7FFFD4; */
+				/* border-bottom: 20px solid #800080; */
+				/* border-left: 20px solid darkgoldenrod; */
+				border-top: 20px solid transparent;
+				border-bottom: 20px solid transparent;
+				border-left: 20px solid transparent;
+				border-right: 20px solid deeppink;
+			}
+			
+			.chat{
+				width: 500px;
+				line-height: 100px;
+				padding: 30px;
+				font-size: 30px;
+				background: lawngreen;
+				margin: 0 auto;
+				border-radius: 30px;
+				
+				/* 父元素 相对定位 */
+				position: relative;
+			}
+			
+			/* 
+				创建伪元素:.
+				:before,在元素内部创建1个最前面假的子元素:after，在元素内部的最后面创建1个假的子元素
+				注意:创建伪元素的时候，content 属性必须写!伪元素默认是行元素。
+			 */
+			.chat:before{
+				/* content: "before的内容"; */
+				display: inline-block; 
+				content:"";
+				width: 0px;
+				height: 0px;
+				/* background: skyblue; */
+				border-top: 20px solid transparent;
+				border-bottom: 20px solid transparent;
+				border-left: 40px solid transparent;
+				border-right: 40px solid lawngreen;
+				
+				 /* 定位 绝对定位*/
+				 position: absolute;
+				 left: -80px;
+				 top: 36px;
+			}
+			
+			.chat:after{
+				/* content: "after的内容"; */
+				content:"";
+				content:"";
+				width: 50px;
+				height: 50px;
+				background: skyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 通过css可以创建假的元素 -->
+		<div  id="d1">
+			
+		</div>
+		
+		<div class="chat">
+			Hi，可以交个朋友吗？
+		</div>
+	</body>
+</html>

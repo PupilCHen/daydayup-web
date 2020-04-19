@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 样式优先级
+			1/直接在style.上写的内容优先级最高。同样的选择器，谁在后面谁的优先级比较高。
+			2/选择器的优先级,在其余情况相同情况下，继承的样式<浏览器模式的样式<标签样式<class样式<id样式<style属性样式。
+			3/可以使用在属性后面使用import将属性优先级提升到最高。
+			4/越具体越复杂的选择器，优先级越高。
+		 -->
+		<style type="text/css">
+			#d1{
+				color: yellow; 
+				font-size: 100px;
+			}
+			
+			.d1{
+				color: orangered;
+				font-size: 120px;
+			}
+			
+			div{
+				color: olivedrab; 
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	</head>
+	<body>
+		<div id="d1" class="d1" style="color: aqua;font-size: 80px;">
+			HelloWorld - d1
+		</div>
+		<div id="d2" style="color: pink;font-size: 100px;">
+			HelloWorld - d2
+		</div>
+		<div id="d3">
+			HelloWorld - d3
+		</div>
+	</body>
+</html>
